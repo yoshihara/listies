@@ -5,4 +5,12 @@
   = javascript_include_tag "application"
   = csrf_meta_tags
 %body
+  #container
+    #user_nav
+      - if current_user
+        = "Welcome #{session[:username]}"
+        = link_to "Sign Out", "/signout"
+      - else
+        = link_to "Sign in with Twitter", "/auth/twitter"
+    - #TODO: flashをこの辺りに出す
   = yield
