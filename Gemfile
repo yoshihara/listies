@@ -34,6 +34,5 @@ group :test do
   gem 'launchy'
   gem 'poltergeist'
   gem "webmock"
-  gem 'rspec-rails', '> 3.0', group: :development
 end
 
