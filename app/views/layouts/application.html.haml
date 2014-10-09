@@ -12,5 +12,6 @@
         = link_to "Sign Out", "/signout"
       - else
         = link_to "Sign in with Twitter", "/auth/twitter"
-    - #TODO: flashをこの辺りに出す
+    #header
+      = render 'shared/flash'
   = yield

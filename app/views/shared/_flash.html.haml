@@ -1,0 +1,10 @@
+- flash.each do |type, message|
+  - class_name = case type.to_sym
+    - when :notice; "alert alert-success"
+    - when :alert, :error;  "alert alert-danger"
+    - when :info;   "alert alert-info"
+  - if class_name.present?
+    %div{class: class_name}
+      %button.close{"data-dismiss" => "alert", type: :button}
+        ✕
+      = simple_format(message)
