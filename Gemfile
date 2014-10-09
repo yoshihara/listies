@@ -27,8 +27,8 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
-  gem 'database_cleaner'
+  gem 'test-unit-rails'
+  gem 'database_rewinder'
   gem 'factory_girl_rails', group: :development
   gem "ffaker"
   gem 'launchy'
