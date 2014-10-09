@@ -8,7 +8,7 @@
   #container
     #user_nav
       - if current_user
-        = "Welcome #{session[:username]}"
+        = "Welcome #{current_user.nickname}"
         = link_to "Sign Out", "/signout"
       - else
         = link_to "Sign in with Twitter", "/auth/twitter"

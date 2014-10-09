@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    #TODO: userを取ってくるようにする
-    true if session[:oauth_token]
+    return nil unless session[:user_id]
+    @user ||= User.find(session[:user_id])
   end
 end
